@@ -5,8 +5,8 @@
 //    may not be republished without approval.
 //----------------------------------------------------------
 
-#ifndef INDEXRECORD_H
-#define INDEXRECORD_H
+#ifndef INDEXMAP_H
+#define INDEXMAP_H
 
 
 #include "IndexRecord.h"
@@ -65,4 +65,4 @@ public:
 
 
 
-#endif // INDEXRECORD_H
+#endif // INDEXMAP_H
