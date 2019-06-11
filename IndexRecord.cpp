@@ -60,6 +60,21 @@ std::ostream& operator<<(std::ostream& theStream, const IndexRecord& r) {
    return theStream;
 }
 
+void IndexRecord::addLocation(const IndexLocation& loc){
+    locations.push_back(loc);
+}
+
+bool IndexRecord::hasLocation(const IndexLocation& loc) const{
+    int size = locations.size();
+    bool contains = false;
+    for (int i = 0; i< size; i++){
+        if (locations.at(i)==loc){
+            contains = true;
+        }
+    }
+    return contains;
+}
+
 
 //TODO  ---  addLocation & hasLocation
 

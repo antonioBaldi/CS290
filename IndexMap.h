@@ -24,7 +24,7 @@ private:
 
     //Get the location this key should be placed at.
     //  Will either containt IndexRecord with that key or an empty IndexRecord
-    int getLocationFor(const std::string& key) const;
+    int getLocationFor( std::string& key) const;
 
 public:
     //Construct HashMap with given number of buckets
@@ -34,12 +34,13 @@ public:
     ~IndexMap();
 
     //Copy constructor and assignment operators
-    IndexMap(const IndexMap &other);
-    IndexMap& operator=(const IndexMap& other);
+    IndexMap(const IndexMap *other);
+
+    IndexMap& operator=(const IndexMap* other);
 
 
     //Returns true of indicated key is in the map
-    bool contains(const std::string& key) const;
+    bool contains(const  std::string& key) const;
 
     //Add indicated location to the map.
     //  If the key does not exist in the map, add an IndexRecord for it

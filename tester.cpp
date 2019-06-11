@@ -5,7 +5,7 @@
 //    may not be republished without approval.
 //----------------------------------------------------------
 #include <iostream>
-
+#include <string>
 #include "IndexRecord.h"
 #include "IndexMap.h"
 

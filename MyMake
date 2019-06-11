@@ -1,0 +1,18 @@
+all:	MakeDirectory linux/tester.o linux/IndexRecord.o linux/IndexMap.o
+	g++ -std=c++11 -o linux/Assign5Tester.exe linux/tester.o linux/IndexRecord.o linux/IndexMap.o
+
+linux/tester.o:	tester.o IndexRecord.h IndexMap.h
+	g++ -std=c++11 -c -o linux/tester.o tester.cpp
+
+linux/IndexRecord.o:	IndexRecord.h IndexRecord.cpp
+	g++ -std=c++11 -c -o linux/IndexRecord.o IndexRecord.cpp
+
+linux/IndexMap.o:	IndexMap.h IndexMap.cpp
+	g++ -std=c++11 -c -o linux/IndexMap.o IndexMap.cpp
+
+
+MakeDirectory:
+	mkdir -p linux
+
+clean: 
+	rm -rf linux	
